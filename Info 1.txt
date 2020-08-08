@@ -1,0 +1,29 @@
+Read Text/Excel Sheet (Sample attached )
+Stock Name : Buy Type : Buy Enter : Buy Stop : Sell Enter : Sell Exit : Stop Loss : Trailing Stop Loss
+
+Buy Type;
+ Intra Day <Do Bracket Order > 
+BTST < Normal Order buy But with after market sell as soon as market opens > 
+Exit All <Close all open positions>
+<Accumulate> carry the position interday
+
+Place Get the tick and see if the price is in range of Buy Order between Buy Enter and Buy Exit the place the order
+And this line means enter the trade when the price is in this range of Buy entry and stop, also the buy order with limit order at buy enter
+
+If no "Buy Exit" value only buy if the price reaches the value of Buy Enter
+In this line u mean to enter a limit order with the buy enter price
+
+
+Once Order executed get the tick and monitor price for Sell Enter / Sell Exit / Stop Loss / Trailing Stop Loss
+Intra Day/Accumulate
+
+if no "Sell Exit" value present then Sell at "Sell Enter" value once meet with Trailing Stop loss value keep Trailing .
+
+Else if sell Exit present then trigger Trailing stop loss only after the Sell Enter triggered with Trailing Stop .
+
+Once Sell Enter triggered Place Trailing Stop Loss and Monitor Sell Exit
+
+For Intra Day Square off or Close position by 3pm if no conditions meet. for accumulate carry the position till any one condition meet.
+If No Buy Enter and Buy Sell <ex BTST> then buy at Market order and next day open Sell at Market after opening
+
+If Buy type exit all close all open position in market.
